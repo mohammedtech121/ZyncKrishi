@@ -1,0 +1,151 @@
+Language,InputText,TranslatedText,Domain,Intent
+tel,నా మిరప పంటకు పురుగు పట్టింది.,Pest infestation detected on my selected crop.,Agriculture,Crop_Diagnostics
+tel,వరంగల్ ప్రాంతంలో రేపు వర్షం పడే అవకాశం ఉందా?,Is there a chance of rain tomorrow in that regional block?,Weather,Weather_Query
+hin,आज टमाटर का मंडी भाव क्या है?,What is the current market price for selected today?,Market,Price_Query
+hin,गेहूं की फसल के लिए कौन सा उर्वरक सबसे अच्छा है?,Which fertilizer is best for selected crop?,Agriculture,Crop_Care
+hin,मेरे आलू की फसल में कीड़ा लग गया है.,Pest infestation detected on my selected crop.,Agriculture,Crop_Diagnostics
+mar,माझ्या गेंहू पिकावर कीड पडली आहे.,Pest infestation detected on my selected crop.,Agriculture,Crop_Diagnostics
+tel,నా మొక్కజొన్న పంటకు పురుగు పట్టింది.,Pest infestation detected on my selected crop.,Agriculture,Crop_Diagnostics
+hin,क्या कानपुर क्षेत्र में कल बारिश होने की संभावना है?,Is there a chance of rain tomorrow in that regional block?,Weather,Weather_Query
+tel,నా వరి పంటకు పురుగు పట్టింది.,Pest infestation detected on my selected crop.,Agriculture,Crop_Diagnostics
+hin,क्या इंदौर क्षेत्र में कल बारिश होने की संभावना है?,Is there a chance of rain tomorrow in that regional block?,Weather,Weather_Query
+tel,నా మిరప పంటకు పురుగు పట్టింది.,Pest infestation detected on my selected crop.,Agriculture,Crop_Diagnostics
+mar,माझ्या टोमॅटो पिकावर कीड पडली आहे.,Pest infestation detected on my selected crop.,Agriculture,Crop_Diagnostics
+tel,నా టమోటా పంటకు పురుగు పట్టింది.,Pest infestation detected on my selected crop.,Agriculture,Crop_Diagnostics
+tel,టమోటా పంటకు ఏ ఎరువులు ఉత్తమం?,Which fertilizer is best for selected crop?,Agriculture,Crop_Care
+tel,టమోటా పంటకు ఏ ఎరువులు ఉత్తమం?,Which fertilizer is best for selected crop?,Agriculture,Crop_Care
+mar,नागपूर भागात उद्या पाऊस पडण्याची शक्यता आहे का?,Is there a chance of rain tomorrow in that regional block?,Weather,Weather_Query
+tel,వరంగల్ ప్రాంతంలో రేపు వర్షం పడే అవకాశం ఉందా?,Is there a chance of rain tomorrow in that regional block?,Weather,Weather_Query
+hin,टमाटर की फसल के लिए कौन सा उर्वरक सबसे अच्छा है?,Which fertilizer is best for selected crop?,Agriculture,Crop_Care
+tel,ఈ రోజు వరి మార్కెట్ ధర ఎంత?,What is the current market price for selected today?,Market,Price_Query
+tel,ఈ రోజు మొక్కజొన్న మార్కెట్ ధర ఎంత?,What is the current market price for selected today?,Market,Price_Query
+tel,నెల్లూరు ప్రాంతంలో రేపు వర్షం పడే అవకాశం ఉందా?,Is there a chance of rain tomorrow in that regional block?,Weather,Weather_Query
+hin,धान की फसल के लिए कौन सा उर्वरक सबसे अच्छा है?,Which fertilizer is best for selected crop?,Agriculture,Crop_Care
+mar,लातूर भागात उद्या पाऊस पडण्याची शक्यता आहे का?,Is there a chance of rain tomorrow in that regional block?,Weather,Weather_Query
+tel,ఈ రోజు టమోటా మార్కెట్ ధర ఎంత?,What is the current market price for selected today?,Market,Price_Query
+hin,आज सरसों का मंडी भाव क्या है?,What is the current market price for selected today?,Market,Price_Query
+mar,आज सोयाबीन चा बाजार भाव काय आहे?,What is the current market price for selected today?,Market,Price_Query
+tel,టమోటా పంటకు ఏ ఎరువులు ఉత్తమం?,Which fertilizer is best for selected crop?,Agriculture,Crop_Care
+tel,ఈ రోజు వరి మార్కెట్ ధర ఎంత?,What is the current market price for selected today?,Market,Price_Query
+hin,क्या इंदौर क्षेत्र में कल बारिश होने की संभावना है?,Is there a chance of rain tomorrow in that regional block?,Weather,Weather_Query
+mar,टोमॅटो पिकासाठी कोणते खत सर्वोत्तम आहे?,Which fertilizer is best for selected crop?,Agriculture,Crop_Care
+mar,माझ्या भात पिकावर कीड पडली आहे.,Pest infestation detected on my selected crop.,Agriculture,Crop_Diagnostics
+hin,क्या भोपाल क्षेत्र में कल बारिश होने की संभावना है?,Is there a chance of rain tomorrow in that regional block?,Weather,Weather_Query
+tel,నెల్లూరు ప్రాంతంలో రేపు వర్షం పడే అవకాశం ఉందా?,Is there a chance of rain tomorrow in that regional block?,Weather,Weather_Query
+mar,माझ्या भात पिकावर कीड पडली आहे.,Pest infestation detected on my selected crop.,Agriculture,Crop_Diagnostics
+mar,आज गेंहू चा बाजार भाव काय आहे?,What is the current market price for selected today?,Market,Price_Query
+mar,गेंहू पिकासाठी कोणते खत सर्वोत्तम आहे?,Which fertilizer is best for selected crop?,Agriculture,Crop_Care
+tel,నా మిరప పంటకు పురుగు పట్టింది.,Pest infestation detected on my selected crop.,Agriculture,Crop_Diagnostics
+hin,क्या इंदौर क्षेत्र में कल बारिश होने की संभावना है?,Is there a chance of rain tomorrow in that regional block?,Weather,Weather_Query
+hin,क्या पटना क्षेत्र में कल बारिश होने की संभावना है?,Is there a chance of rain tomorrow in that regional block?,Weather,Weather_Query
+mar,गेंहू पिकासाठी कोणते खत सर्वोत्तम आहे?,Which fertilizer is best for selected crop?,Agriculture,Crop_Care
+tel,ఈ రోజు టమోటా మార్కెట్ ధర ఎంత?,What is the current market price for selected today?,Market,Price_Query
+tel,టమోటా పంటకు ఏ ఎరువులు ఉత్తమం?,Which fertilizer is best for selected crop?,Agriculture,Crop_Care
+tel,ఈ రోజు టమోటా మార్కెట్ ధర ఎంత?,What is the current market price for selected today?,Market,Price_Query
+mar,आज भात चा बाजार भाव काय आहे?,What is the current market price for selected today?,Market,Price_Query
+mar,नाशिक भागात उद्या पाऊस पडण्याची शक्यता आहे का?,Is there a chance of rain tomorrow in that regional block?,Weather,Weather_Query
+tel,నా మొక్కజొన్న పంటకు పురుగు పట్టింది.,Pest infestation detected on my selected crop.,Agriculture,Crop_Diagnostics
+mar,माझ्या सोयाबीन पिकावर कीड पडली आहे.,Pest infestation detected on my selected crop.,Agriculture,Crop_Diagnostics
+mar,आज कापूस चा बाजार भाव काय आहे?,What is the current market price for selected today?,Market,Price_Query
+hin,गेहूं की फसल के लिए कौन सा उर्वरक सबसे अच्छा है?,Which fertilizer is best for selected crop?,Agriculture,Crop_Care
+hin,मेरे आलू की फसल में कीड़ा लग गया है.,Pest infestation detected on my selected crop.,Agriculture,Crop_Diagnostics
+mar,आज टोमॅटो चा बाजार भाव काय आहे?,What is the current market price for selected today?,Market,Price_Query
+hin,मेरे टमाटर की फसल में कीड़ा लग गया है.,Pest infestation detected on my selected crop.,Agriculture,Crop_Diagnostics
+mar,माझ्या टोमॅटो पिकावर कीड पडली आहे.,Pest infestation detected on my selected crop.,Agriculture,Crop_Diagnostics
+mar,टोमॅटो पिकासाठी कोणते खत सर्वोत्तम आहे?,Which fertilizer is best for selected crop?,Agriculture,Crop_Care
+mar,पुणे भागात उद्या पाऊस पडण्याची शक्यता आहे का?,Is there a chance of rain tomorrow in that regional block?,Weather,Weather_Query
+mar,लातूर भागात उद्या पाऊस पडण्याची शक्यता आहे का?,Is there a chance of rain tomorrow in that regional block?,Weather,Weather_Query
+mar,सोयाबीन पिकासाठी कोणते खत सर्वोत्तम आहे?,Which fertilizer is best for selected crop?,Agriculture,Crop_Care
+mar,माझ्या सोयाबीन पिकावर कीड पडली आहे.,Pest infestation detected on my selected crop.,Agriculture,Crop_Diagnostics
+hin,आज सरसों का मंडी भाव क्या है?,What is the current market price for selected today?,Market,Price_Query
+tel,వరి పంటకు ఏ ఎరువులు ఉత్తమం?,Which fertilizer is best for selected crop?,Agriculture,Crop_Care
+mar,नागपूर भागात उद्या पाऊस पडण्याची शक्यता आहे का?,Is there a chance of rain tomorrow in that regional block?,Weather,Weather_Query
+mar,माझ्या कापूस पिकावर कीड पडली आहे.,Pest infestation detected on my selected crop.,Agriculture,Crop_Diagnostics
+tel,మిరప పంటకు ఏ ఎరువులు ఉత్తమం?,Which fertilizer is best for selected crop?,Agriculture,Crop_Care
+mar,नागपूर भागात उद्या पाऊस पडण्याची शक्यता आहे का?,Is there a chance of rain tomorrow in that regional block?,Weather,Weather_Query
+tel,పత్తి పంటకు ఏ ఎరువులు ఉత్తమం?,Which fertilizer is best for selected crop?,Agriculture,Crop_Care
+mar,माझ्या कापूस पिकावर कीड पडली आहे.,Pest infestation detected on my selected crop.,Agriculture,Crop_Diagnostics
+mar,माझ्या टोमॅटो पिकावर कीड पडली आहे.,Pest infestation detected on my selected crop.,Agriculture,Crop_Diagnostics
+hin,क्या भोपाल क्षेत्र में कल बारिश होने की संभावना है?,Is there a chance of rain tomorrow in that regional block?,Weather,Weather_Query
+mar,नाशिक भागात उद्या पाऊस पडण्याची शक्यता आहे का?,Is there a chance of rain tomorrow in that regional block?,Weather,Weather_Query
+mar,आज भात चा बाजार भाव काय आहे?,What is the current market price for selected today?,Market,Price_Query
+hin,आज आलू का मंडी भाव क्या है?,What is the current market price for selected today?,Market,Price_Query
+mar,भात पिकासाठी कोणते खत सर्वोत्तम आहे?,Which fertilizer is best for selected crop?,Agriculture,Crop_Care
+tel,మిరప పంటకు ఏ ఎరువులు ఉత్తమం?,Which fertilizer is best for selected crop?,Agriculture,Crop_Care
+mar,आज सोयाबीन चा बाजार भाव काय आहे?,What is the current market price for selected today?,Market,Price_Query
+tel,నా పత్తి పంటకు పురుగు పట్టింది.,Pest infestation detected on my selected crop.,Agriculture,Crop_Diagnostics
+mar,टोमॅटो पिकासाठी कोणते खत सर्वोत्तम आहे?,Which fertilizer is best for selected crop?,Agriculture,Crop_Care
+tel,నా టమోటా పంటకు పురుగు పట్టింది.,Pest infestation detected on my selected crop.,Agriculture,Crop_Diagnostics
+mar,माझ्या भात पिकावर कीड पडली आहे.,Pest infestation detected on my selected crop.,Agriculture,Crop_Diagnostics
+hin,आलू की फसल के लिए कौन सा उर्वरक सबसे अच्छा है?,Which fertilizer is best for selected crop?,Agriculture,Crop_Care
+tel,నెల్లూరు ప్రాంతంలో రేపు వర్షం పడే అవకాశం ఉందా?,Is there a chance of rain tomorrow in that regional block?,Weather,Weather_Query
+mar,माझ्या कापूस पिकावर कीड पडली आहे.,Pest infestation detected on my selected crop.,Agriculture,Crop_Diagnostics
+hin,क्या इंदौर क्षेत्र में कल बारिश होने की संभावना है?,Is there a chance of rain tomorrow in that regional block?,Weather,Weather_Query
+tel,నా పత్తి పంటకు పురుగు పట్టింది.,Pest infestation detected on my selected crop.,Agriculture,Crop_Diagnostics
+tel,ఈ రోజు టమోటా మార్కెట్ ధర ఎంత?,What is the current market price for selected today?,Market,Price_Query
+tel,ఈ రోజు మొక్కజొన్న మార్కెట్ ధర ఎంత?,What is the current market price for selected today?,Market,Price_Query
+hin,गेहूं की फसल के लिए कौन सा उर्वरक सबसे अच्छा है?,Which fertilizer is best for selected crop?,Agriculture,Crop_Care
+tel,నెల్లూరు ప్రాంతంలో రేపు వర్షం పడే అవకాశం ఉందా?,Is there a chance of rain tomorrow in that regional block?,Weather,Weather_Query
+tel,నా మొక్కజొన్న పంటకు పురుగు పట్టింది.,Pest infestation detected on my selected crop.,Agriculture,Crop_Diagnostics
+mar,माझ्या भात पिकावर कीड पडली आहे.,Pest infestation detected on my selected crop.,Agriculture,Crop_Diagnostics
+mar,नाशिक भागात उद्या पाऊस पडण्याची शक्यता आहे का?,Is there a chance of rain tomorrow in that regional block?,Weather,Weather_Query
+mar,लातूर भागात उद्या पाऊस पडण्याची शक्यता आहे का?,Is there a chance of rain tomorrow in that regional block?,Weather,Weather_Query
+mar,आज कापूस चा बाजार भाव काय आहे?,What is the current market price for selected today?,Market,Price_Query
+hin,गेहूं की फसल के लिए कौन सा उर्वरक सबसे अच्छा है?,Which fertilizer is best for selected crop?,Agriculture,Crop_Care
+mar,माझ्या भात पिकावर कीड पडली आहे.,Pest infestation detected on my selected crop.,Agriculture,Crop_Diagnostics
+tel,ఈ రోజు మిరప మార్కెట్ ధర ఎంత?,What is the current market price for selected today?,Market,Price_Query
+hin,क्या भोपाल क्षेत्र में कल बारिश होने की संभावना है?,Is there a chance of rain tomorrow in that regional block?,Weather,Weather_Query
+hin,मेरे धान की फसल में कीड़ा लग गया है.,Pest infestation detected on my selected crop.,Agriculture,Crop_Diagnostics
+tel,ఈ రోజు టమోటా మార్కెట్ ధర ఎంత?,What is the current market price for selected today?,Market,Price_Query
+hin,क्या भोपाल क्षेत्र में कल बारिश होने की संभावना है?,Is there a chance of rain tomorrow in that regional block?,Weather,Weather_Query
+tel,ఈ రోజు మొక్కజొన్న మార్కెట్ ధర ఎంత?,What is the current market price for selected today?,Market,Price_Query
+tel,మిరప పంటకు ఏ ఎరువులు ఉత్తమం?,Which fertilizer is best for selected crop?,Agriculture,Crop_Care
+hin,क्या कानपुर क्षेत्र में कल बारिश होने की संभावना है?,Is there a chance of rain tomorrow in that regional block?,Weather,Weather_Query
+hin,आज सरसों का मंडी भाव क्या है?,What is the current market price for selected today?,Market,Price_Query
+hin,क्या पटना क्षेत्र में कल बारिश होने की संभावना है?,Is there a chance of rain tomorrow in that regional block?,Weather,Weather_Query
+hin,मेरे आलू की फसल में कीड़ा लग गया है.,Pest infestation detected on my selected crop.,Agriculture,Crop_Diagnostics
+hin,मेरे धान की फसल में कीड़ा लग गया है.,Pest infestation detected on my selected crop.,Agriculture,Crop_Diagnostics
+hin,क्या इंदौर क्षेत्र में कल बारिश होने की संभावना है?,Is there a chance of rain tomorrow in that regional block?,Weather,Weather_Query
+tel,ఈ రోజు వరి మార్కెట్ ధర ఎంత?,What is the current market price for selected today?,Market,Price_Query
+tel,వరంగల్ ప్రాంతంలో రేపు వర్షం పడే అవకాశం ఉందా?,Is there a chance of rain tomorrow in that regional block?,Weather,Weather_Query
+hin,आज सरसों का मंडी भाव क्या है?,What is the current market price for selected today?,Market,Price_Query
+hin,क्या कानपुर क्षेत्र में कल बारिश होने की संभावना है?,Is there a chance of rain tomorrow in that regional block?,Weather,Weather_Query
+hin,आज टमाटर का मंडी भाव क्या है?,What is the current market price for selected today?,Market,Price_Query
+mar,गेंहू पिकासाठी कोणते खत सर्वोत्तम आहे?,Which fertilizer is best for selected crop?,Agriculture,Crop_Care
+tel,వరంగల్ ప్రాంతంలో రేపు వర్షం పడే అవకాశం ఉందా?,Is there a chance of rain tomorrow in that regional block?,Weather,Weather_Query
+hin,आज धान का मंडी भाव क्या है?,What is the current market price for selected today?,Market,Price_Query
+tel,మొక్కజొన్న పంటకు ఏ ఎరువులు ఉత్తమం?,Which fertilizer is best for selected crop?,Agriculture,Crop_Care
+tel,వరంగల్ ప్రాంతంలో రేపు వర్షం పడే అవకాశం ఉందా?,Is there a chance of rain tomorrow in that regional block?,Weather,Weather_Query
+hin,गेहूं की फसल के लिए कौन सा उर्वरक सबसे अच्छा है?,Which fertilizer is best for selected crop?,Agriculture,Crop_Care
+mar,गेंहू पिकासाठी कोणते खत सर्वोत्तम आहे?,Which fertilizer is best for selected crop?,Agriculture,Crop_Care
+mar,लातूर भागात उद्या पाऊस पडण्याची शक्यता आहे का?,Is there a chance of rain tomorrow in that regional block?,Weather,Weather_Query
+tel,వరి పంటకు ఏ ఎరువులు ఉత్తమం?,Which fertilizer is best for selected crop?,Agriculture,Crop_Care
+tel,నా టమోటా పంటకు పురుగు పట్టింది.,Pest infestation detected on my selected crop.,Agriculture,Crop_Diagnostics
+hin,आज टमाटर का मंडी भाव क्या है?,What is the current market price for selected today?,Market,Price_Query
+tel,కర్నూలు ప్రాంతంలో రేపు వర్షం పడే అవకాశం ఉందా?,Is there a chance of rain tomorrow in that regional block?,Weather,Weather_Query
+hin,मेरे आलू की फसल में कीड़ा लग गया है.,Pest infestation detected on my selected crop.,Agriculture,Crop_Diagnostics
+mar,आज टोमॅटो चा बाजार भाव काय आहे?,What is the current market price for selected today?,Market,Price_Query
+mar,टोमॅटो पिकासाठी कोणते खत सर्वोत्तम आहे?,Which fertilizer is best for selected crop?,Agriculture,Crop_Care
+hin,क्या इंदौर क्षेत्र में कल बारिश होने की संभावना है?,Is there a chance of rain tomorrow in that regional block?,Weather,Weather_Query
+hin,क्या पटना क्षेत्र में कल बारिश होने की संभावना है?,Is there a chance of rain tomorrow in that regional block?,Weather,Weather_Query
+mar,माझ्या टोमॅटो पिकावर कीड पडली आहे.,Pest infestation detected on my selected crop.,Agriculture,Crop_Diagnostics
+tel,ఈ రోజు మొక్కజొన్న మార్కెట్ ధర ఎంత?,What is the current market price for selected today?,Market,Price_Query
+tel,గుంటూరు ప్రాంతంలో రేపు వర్షం పడే అవకాశం ఉందా?,Is there a chance of rain tomorrow in that regional block?,Weather,Weather_Query
+hin,मेरे गेहूं की फसल में कीड़ा लग गया है.,Pest infestation detected on my selected crop.,Agriculture,Crop_Diagnostics
+mar,आज सोयाबीन चा बाजार भाव काय आहे?,What is the current market price for selected today?,Market,Price_Query
+tel,నా వరి పంటకు పురుగు పట్టింది.,Pest infestation detected on my selected crop.,Agriculture,Crop_Diagnostics
+mar,नाशिक भागात उद्या पाऊस पडण्याची शक्यता आहे का?,Is there a chance of rain tomorrow in that regional block?,Weather,Weather_Query
+tel,నా మొక్కజొన్న పంటకు పురుగు పట్టింది.,Pest infestation detected on my selected crop.,Agriculture,Crop_Diagnostics
+hin,आज धान का मंडी भाव क्या है?,What is the current market price for selected today?,Market,Price_Query
+tel,ఈ రోజు టమోటా మార్కెట్ ధర ఎంత?,What is the current market price for selected today?,Market,Price_Query
+mar,भात पिकासाठी कोणते खत सर्वोत्तम आहे?,Which fertilizer is best for selected crop?,Agriculture,Crop_Care
+tel,కర్నూలు ప్రాంతంలో రేపు వర్షం పడే అవకాశం ఉందా?,Is there a chance of rain tomorrow in that regional block?,Weather,Weather_Query
+tel,ఈ రోజు పత్తి మార్కెట్ ధర ఎంత?,What is the current market price for selected today?,Market,Price_Query
+mar,माझ्या सोयाबीन पिकावर कीड पडली आहे.,Pest infestation detected on my selected crop.,Agriculture,Crop_Diagnostics
+mar,आज सोयाबीन चा बाजार भाव काय आहे?,What is the current market price for selected today?,Market,Price_Query
+hin,क्या इंदौर क्षेत्र में कल बारिश होने की संभावना है?,Is there a chance of rain tomorrow in that regional block?,Weather,Weather_Query
+mar,लातूर भागात उद्या पाऊस पडण्याची शक्यता आहे का?,Is there a chance of rain tomorrow in that regional block?,Weather,Weather_Query
+mar,भात पिकासाठी कोणते खत सर्वोत्तम आहे?,Which fertilizer is best for selected crop?,Agriculture,Crop_Care
+hin,टमाटर की फसल के लिए कौन सा उर्वरक सबसे अच्छा है?,Which fertilizer is best for selected crop?,Agriculture,Crop_Care
+tel,టమోటా పంటకు ఏ ఎరువులు ఉత్తమం?,Which fertilizer is best for selected crop?,Agriculture,Crop_Care
+mar,पुणे भागात उद्या पाऊस पडण्याची शक्यता आहे का?,Is there a chance of rain tomorrow in that regional block?,Weather,Weather_Query
