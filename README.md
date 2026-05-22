@@ -7,6 +7,10 @@ ZyncKrishi is an enterprise-grade, hyper-local agricultural intelligence platfor
 
 ## 📊 Dataset Transformation Metrics (Before vs After)
 
+*(Evidence of ZyncKrishi dataset processing directly on the Adaption platform)*
+
+![Adaption Platform Verification](adaption-proof.png)
+
 We utilized the **Adaption Labs Data Pipeline** to transform an unoptimized, raw baseline dataset into a production-grade instruction tuning asset.
 
 | Metric | Baseline Dataset (Before) | Optimized Dataset (After) | Change (%) |
