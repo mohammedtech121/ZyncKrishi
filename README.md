@@ -34,3 +34,16 @@ The optimized dataset was pushed into the **AutoScientist Engine** to execute **
 ## 📁 Repository Structure
 * `ZyncKrishi_Optimized.csv` / `dataset.json` - The core high-quality adapted dataset.
 * `README.md` - Dataset documentation and performance telemetry.    
+
+---
+
+---
+
+## 📂 Open-Source Datasets
+
+As part of our commitment to open-source agricultural AI and the hackathon submission requirements, the optimized ZyncKrishi datasets are publicly available for research and community use:
+
+* 📊 **Kaggle:** [ZyncKrishi Multilingual Agri-QA Dataset](https://www.kaggle.com/datasets/mohammedkhan7/zynckrishi-multilingual-agri-qa-dataset)
+* 🤗 **Hugging Face:** [ZyncKrishi-Agriculture-Dataset](https://huggingface.co/datasets/Mohammed654/ZyncKrishi-Agriculture-Dataset)
+
+*(Note: These datasets have been processed and localized specifically for Indian agricultural contexts).*
