@@ -215,15 +215,6 @@
     </main>
 
     <script type="module">
-        // =========================================================
-        // 🔑 BOT-BYPASS: API KEY CONFIG (DO TUKDO ME TOD KAR DALO)
-        // =========================================================
-        const part1 = "AIzaSyDiAmMf4xGShS9nsF"; 
-        const part2 = "g7AGBAJBaMhLMMPe8"; 
-
-        const GEMINI_API_KEY = part1 + part2; 
-        // =========================================================
-
         lucide.createIcons();
 
         // FEATURE 2: CONVERSATION MEMORY STORE (Strict Gemini Schema Format)
@@ -238,7 +229,7 @@
             }
         ];
 
-        // Sidebar Navigation
+        // Sidebar Navigation System
         const navButtons = {
             'btn-dashboard': { btn: document.getElementById('btn-dashboard'), section: document.getElementById('section-dashboard') },
             'btn-chat': { btn: document.getElementById('btn-chat'), section: document.getElementById('section-chat') },
@@ -317,12 +308,10 @@
             if ('speechSynthesis' in window) {
                 window.speechSynthesis.cancel();
 
-                // Markdown clean up for voice smooth reading
                 let cleanText = rawText.replace(/[\*\#🤖🎯💡📅]/g, '').replace(/<br>/g, ' ');
-                
                 const utterance = new SpeechSynthesisUtterance(cleanText);
                 
-                // If response contains Hindi/Marathi script, use hi-IN, else use Indian English (en-IN)
+                // If response contains Hindi/Marathi script, use hi-IN, else use en-IN
                 const hasDevanagari = /[अ-ह]/.test(rawText);
                 if (hasDevanagari) {
                     utterance.lang = 'hi-IN';
@@ -337,6 +326,7 @@
             }
         }
 
+        // SECURE RUNTIME PIPELINE (Calls our secure Vercel backend route)
         async function runInference() {
             const promptText = chatInput.value.trim();
             if(!promptText) return;
@@ -365,7 +355,8 @@
             });
 
             try {
-                const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${GEMINI_API_KEY}`, {
+                // 🔥 NO EXPOSED PLAIN KEYS - Calling server function /api/chat directly
+                const response = await fetch('/api/chat', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ contents: chatHistory })
@@ -389,9 +380,9 @@
                     speakResponse(aiResponse);
 
                 } else if (data.error) {
-                    aiResponse = `⚠️ **Google API Agent Alert:** ${data.error.message} (Status: ${data.error.status}).`;
+                    aiResponse = `⚠️ **Backend Gateway Alert:** ${data.error.message || data.error}`;
                 } else {
-                    aiResponse = "Error parsing response streams. Verify connection logs.";
+                    aiResponse = "Error parsing response streams from serverless backend.";
                 }
 
                 chatOutput.innerHTML += `
@@ -405,7 +396,7 @@
                 if(loaderElem) loaderElem.remove();
                 chatOutput.innerHTML += `
                     <div class="bg-rose-950/40 text-rose-400 p-4 rounded-xl max-w-2xl border border-rose-900/50 text-xs">
-                        Network Exception: Hyper-local routing dropped. Verify key limits.
+                        Network Exception: Secure proxy unreachable.
                     </div>
                 `;
             }
