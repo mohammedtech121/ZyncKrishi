@@ -140,21 +140,26 @@
                     <div class="flex items-center gap-3">
                         <div class="p-2 bg-emerald-500/10 text-emerald-400 rounded-xl"><i data-lucide="bot" class="w-6 h-6"></i></div>
                         <div>
-                            <h2 class="text-xl font-bold text-white">ZyncKrishi Live Streaming Chat Engine</h2>
-                            <p class="text-xs text-slate-400">Powered by Custom Fine-Tuned Mixtral Architecture & Gemini Real-time API</p>
+                            <h2 class="text-xl font-bold text-white">ZyncKrishi Copilot Workflow Engine</h2>
+                            <p class="text-xs text-slate-400">Context Memory, Audio-Telemetry & Multi-Agent Explainability Active</p>
                         </div>
                     </div>
                 </div>
 
                 <div id="chat-output" class="flex-1 overflow-y-auto bg-slate-950 rounded-xl p-6 border border-slate-800 space-y-4 mb-4">
                     <div class="bg-slate-900/40 text-slate-300 border border-slate-800/60 p-4 rounded-xl max-w-2xl">
-                        Hello, I am **ZyncKrishi AI**. Ask me anything about crop diseases, pest controls, or Mandi rates in English, Hindi, or Marathi! 🌾
+                        Hello, I am **ZyncKrishi AI Copilot**. Ask me anything about crop diagnostics, local weather impact, or Mandi analytics. 
+                        <br><br>
+                        *💡 Pro-Tip: You can now click the **Mic button** to talk contextually in English, Hindi, or Marathi!* 🌾🎙️
                     </div>
                 </div>
 
-                <div class="flex gap-3">
-                    <input type="text" id="chat-input" placeholder="Type your agricultural query here (e.g., Kapas me kida lag gaya h...)" class="flex-1 bg-slate-950 border border-slate-800 text-sm rounded-xl px-4 py-3 text-slate-200 focus:outline-none focus:border-emerald-500 transition-all">
-                    <button id="btn-send-chat" class="bg-emerald-600 hover:bg-emerald-500 text-white font-medium text-sm rounded-xl px-6 py-3 flex items-center gap-2 transition-all">
+                <div class="flex gap-3 items-center">
+                    <button id="btn-mic" class="bg-slate-950 hover:bg-slate-800 text-slate-400 hover:text-emerald-400 p-3.5 rounded-xl border border-slate-800 transition-all flex items-center justify-center relative group" title="Speak in Hindi/Marathi/English">
+                        <i data-lucide="mic" id="mic-icon" class="w-5 h-5"></i>
+                    </button>
+                    <input type="text" id="chat-input" placeholder="Type your query or click mic to speak (e.g., Kapas me kida lag gaya h, kal baarish hogi?)" class="flex-1 bg-slate-950 border border-slate-800 text-sm rounded-xl px-4 py-3.5 text-slate-200 focus:outline-none focus:border-emerald-500 transition-all">
+                    <button id="btn-send-chat" class="bg-emerald-600 hover:bg-emerald-500 text-white font-medium text-sm rounded-xl px-6 py-3.5 flex items-center gap-2 transition-all h-full">
                         Send <i data-lucide="send" class="w-4 h-4"></i>
                     </button>
                 </div>
@@ -211,13 +216,26 @@
 
     <script type="module">
         // =========================================================
-        // 🔑 BAS APNI API KEY YAHAN DAAL (Line 248)
+        // 🔑 APNI NAYI KEY YAHAN CHIPKAO
         // =========================================================
         const GEMINI_API_KEY = "AIzaSyDUUue3upZuideif5p_wWaIsvBYsdEFelY"; 
         // =========================================================
 
         lucide.createIcons();
 
+        // FEATURE 2: CONVERSATION MEMORY STORE (Strict Gemini Schema Format)
+        let chatHistory = [
+            {
+                role: "user",
+                parts: [{ text: "You are ZyncKrishi, an advanced multi-agent agricultural copilot pipeline. You do not behave like a generic AI chatbot. You think like a context-aware field specialist. Whenever a user submits a prompt, you must process it internally and strictly return a beautifully structured response using this markdown layout:\n\n🤖 **AGENT CROP DIAGNOSIS & INTELLIGENCE**:\n[Your structural diagnosis or data breakdown]\n\n🎯 **CONFIDENCE METRIC**: [Provide a factual estimated score based on standard agricultural datasets, e.g., 91%]\n\n💡 **EXPLAINABILITY ENGINE**: \n[Explain precisely WHY you made this assessment, highlighting matching crop vectors or market dynamics]\n\n📅 **ACTION PLAN & HYPER-LOCAL TIMELINE**:\n[Give step-by-step sequential directions with clear time markers, incorporating localized weather logic if implied]\n\nAlways reply conversationally in the same language context (English, Hindi, Hinglish, or Marathi) that the user used." }]
+            },
+            {
+                role: "model",
+                parts: [{ text: "Understood. ZyncKrishi Copilot pipeline initialized. I will process inputs through specialized workflow tokens and enforce strict structured layout formats with confidence limits and explainability layers." }]
+            }
+        ];
+
+        // Sidebar Navigation System
         const navButtons = {
             'btn-dashboard': { btn: document.getElementById('btn-dashboard'), section: document.getElementById('section-dashboard') },
             'btn-chat': { btn: document.getElementById('btn-chat'), section: document.getElementById('section-chat') },
@@ -247,6 +265,7 @@
         const chatInput = document.getElementById('chat-input');
         const sendBtn = document.getElementById('btn-send-chat');
         const chatOutput = document.getElementById('chat-output');
+        const micBtn = document.getElementById('btn-mic');
 
         if(sendBtn && chatInput && chatOutput) {
             sendBtn.addEventListener('click', runInference);
@@ -255,12 +274,50 @@
             });
         }
 
+        // FEATURE 1: NATIVE WEB SPEECH ENGINE (AUDIO INPUT STREAM TO TEXT)
+        if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
+            const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+            const recognition = new SpeechRecognition();
+            recognition.continuous = false;
+            recognition.interimResults = false;
+            recognition.lang = 'hi-IN'; // Optimized for local Indian dialect contextual processing
+
+            let isListening = false;
+
+            recognition.onstart = () => {
+                isListening = true;
+                micBtn.classList.remove('text-slate-400', 'border-slate-800');
+                micBtn.classList.add('bg-rose-950/40', 'text-rose-400', 'border-rose-500/40', 'animate-pulse');
+            };
+
+            recognition.onend = () => {
+                isListening = false;
+                micBtn.classList.remove('bg-rose-950/40', 'text-rose-400', 'border-rose-500/40', 'animate-pulse');
+                micBtn.classList.add('bg-slate-950', 'text-slate-400', 'border-slate-800');
+            };
+
+            recognition.onresult = (event) => {
+                const speechToTextResult = event.results[0][0].transcript;
+                if(chatInput) chatInput.value = speechToTextResult;
+            };
+
+            micBtn.addEventListener('click', () => {
+                if (isListening) recognition.stop();
+                else recognition.start();
+            });
+        } else {
+            // Safe fallback if browser security policies block recording frameworks
+            micBtn.style.display = 'none';
+        }
+
+        // Core Inference Execution Engine
         async function runInference() {
             const promptText = chatInput.value.trim();
             if(!promptText) return;
 
+            // Render User Bubble
             chatOutput.innerHTML += `
-                <div class="bg-slate-800 text-slate-100 p-4 rounded-xl max-w-2xl ml-auto text-right border border-slate-700">
+                <div class="bg-slate-800 text-slate-100 p-4 rounded-xl max-w-2xl ml-auto text-right border border-slate-700 shadow-lg font-medium text-sm">
                     ${promptText}
                 </div>
             `;
@@ -269,20 +326,26 @@
 
             const loaderId = 'loader-' + Date.now();
             chatOutput.innerHTML += `
-                <div id="${loaderId}" class="bg-slate-900 text-slate-400 p-4 rounded-xl max-w-2xl border border-slate-800 italic animate-pulse text-xs">
-                    ZyncKrishi Agents are processing hyper-local response pipelines...
+                <div id="${loaderId}" class="bg-slate-900 text-slate-400 p-4 rounded-xl max-w-2xl border border-slate-800 italic animate-pulse text-xs flex items-center gap-2">
+                    <i data-lucide="cpu" class="w-4 h-4 text-emerald-500 animate-spin"></i>
+                    ZyncKrishi Agents running hyper-local explainability pipelines...
                 </div>
             `;
+            lucide.createIcons();
             chatOutput.scrollTop = chatOutput.scrollHeight;
 
+            // Push User Message to Context Array (Memory Lock)
+            chatHistory.push({
+                role: "user",
+                parts: [{ text: promptText }]
+            });
+
             try {
-                // ABSOLUTE HARDCODED BULLET-PROOF FETCH WITH GEMINI 2.5 FLASH
+                // Fetch directly through latest Gemini 2.5 Flash gateway
                 const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${GEMINI_API_KEY}`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        contents: [{ parts: [{ text: `You are ZyncKrishi, an agricultural AI. Help the farmer step-by-step in the language they used. Input: ${promptText}` }] }]
-                    })
+                    body: JSON.stringify({ contents: chatHistory })
                 });
 
                 const data = await response.json();
@@ -293,14 +356,21 @@
                 let aiResponse = "";
                 if (data.candidates && data.candidates[0].content && data.candidates[0].content.parts && data.candidates[0].content.parts[0].text) {
                     aiResponse = data.candidates[0].content.parts[0].text;
+                    
+                    // Push Model Response back to History to seal context chain
+                    chatHistory.push({
+                        role: "model",
+                        parts: [{ text: aiResponse }]
+                    });
                 } else if (data.error) {
-                    aiResponse = `⚠️ **Google API Alert:** ${data.error.message} (Status: ${data.error.status}).`;
+                    aiResponse = `⚠️ **Google API Agent Alert:** ${data.error.message} (Status: ${data.error.status}).`;
                 } else {
-                    aiResponse = "Error parsing response. Check console.";
+                    aiResponse = "Error parsing response streams. Verify connection logs.";
                 }
 
+                // Render Clean Format Output with Newlines conversion
                 chatOutput.innerHTML += `
-                    <div class="bg-slate-900 text-slate-200 p-4 rounded-xl max-w-2xl border border-slate-800 leading-relaxed">
+                    <div class="bg-slate-900 text-slate-200 p-5 rounded-xl max-w-2xl border border-slate-800 leading-relaxed text-sm shadow-md border-l-4 border-l-emerald-500 space-y-2">
                         ${aiResponse.replace(/\n/g, '<br>')}
                     </div>
                 `;
@@ -310,7 +380,7 @@
                 if(loaderElem) loaderElem.remove();
                 chatOutput.innerHTML += `
                     <div class="bg-rose-950/40 text-rose-400 p-4 rounded-xl max-w-2xl border border-rose-900/50 text-xs">
-                        Network Exception: Unable to reach Google API Gateways.
+                        Network Exception: Hyper-local routing dropped. Verify key limits.
                     </div>
                 `;
             }
