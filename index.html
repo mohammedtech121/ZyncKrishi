@@ -26,9 +26,6 @@
                 <button id="btn-chat" class="w-full flex items-center gap-3 px-4 py-3 text-sm font-medium rounded-xl text-slate-400 hover:bg-slate-800 hover:text-slate-200 transition-all">
                     <i data-lucide="bot-message-square" class="w-5 h-5"></i> AI Farmer Copilot
                 </button>
-                <button id="btn-diagnostics" class="w-full flex items-center gap-3 px-4 py-3 text-sm font-medium rounded-xl text-slate-400 hover:bg-slate-800 hover:text-slate-200 transition-all">
-                    <i data-lucide="scan-eye" class="w-5 h-5"></i> Crop Diagnostics
-                </button>
                 <button id="btn-mandi" class="w-full flex items-center gap-3 px-4 py-3 text-sm font-medium rounded-xl text-slate-400 hover:bg-slate-800 hover:text-slate-200 transition-all">
                     <i data-lucide="trending-up" class="w-5 h-5"></i> Mandi Analytics
                 </button>
@@ -84,14 +81,14 @@
                         <span class="text-xs font-bold px-2 py-1 rounded-lg bg-blue-500/10 text-blue-400 border border-blue-500/20">Optimal</span>
                     </div>
                     <div class="mt-4 flex items-baseline gap-2">
-                        <span class="text-3xl font-bold text-emerald-400">03</span>
+                        <span class="text-3xl font-bold text-emerald-400">02</span>
                         <span class="text-sm font-medium text-slate-400 ml-1">Agents Live</span>
                     </div>
-                    <p class="text-xs text-slate-400 mt-3 flex items-center gap-1"><i data-lucide="cpu" class="w-3 h-3 text-blue-400"></i> Translation, Diagnostics & Market agents connected</p>
+                    <p class="text-xs text-slate-400 mt-3 flex items-center gap-1"><i data-lucide="cpu" class="w-3 h-3 text-blue-400"></i> Translation & Market telemetry agents connected</p>
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div class="grid grid-cols-1 gap-8">
                 <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 flex flex-col h-[400px]">
                     <div class="flex items-center gap-3 mb-4">
                         <div class="p-2.5 bg-blue-500/10 text-blue-400 rounded-xl border border-blue-500/20">
@@ -112,23 +109,6 @@
                             <span class="text-xs font-bold text-emerald-400 block mb-1">BhashaSetu Agent Translation (Internal Processing):</span>
                             <p class="text-slate-300 bg-slate-900/40 px-3 py-2 rounded-xl inline-block border border-emerald-950 text-emerald-300 italic">"White spots have appeared on my crops, what should I do?"</p>
                         </div>
-                    </div>
-                </div>
-
-                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 flex flex-col h-[400px]">
-                    <div class="flex items-center gap-3 mb-4">
-                        <div class="p-2.5 bg-purple-500/10 text-purple-400 rounded-xl border border-purple-500/20">
-                            <i data-lucide="shield-alert" class="w-6 h-6"></i>
-                        </div>
-                        <div>
-                            <h3 class="font-bold text-lg text-white">KrishiDoc Diagnostic Agent</h3>
-                            <p class="text-xs text-slate-400">Upload plant images for real-time localization fix</p>
-                        </div>
-                    </div>
-                    <div class="flex-1 flex flex-col justify-center items-center border-2 border-dashed border-slate-800 rounded-xl p-8 bg-slate-950/20 hover:bg-slate-950/40 transition-all cursor-pointer">
-                        <i data-lucide="cloud-lightning" class="w-10 h-10 text-slate-500 mb-3"></i>
-                        <p class="text-sm font-semibold text-slate-300 text-center">Drop crop leaf image here or click to browse</p>
-                        <p class="text-xs text-slate-500 mt-1">Supports JPEG, PNG up to 10MB</p>
                     </div>
                 </div>
             </div>
@@ -162,18 +142,6 @@
                     <button id="btn-send-chat" class="bg-emerald-600 hover:bg-emerald-500 text-white font-medium text-sm rounded-xl px-6 py-3.5 flex items-center gap-2 transition-all h-full">
                         Send <i data-lucide="send" class="w-4 h-4"></i>
                     </button>
-                </div>
-            </div>
-        </div>
-
-        <div id="section-diagnostics" class="space-y-6 hidden">
-            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6">
-                <h2 class="text-xl font-bold text-white mb-2">KrishiDoc Deep Vision Analytics</h2>
-                <p class="text-xs text-slate-400 mb-6">Upload a photo of your infected leaf to run immediate visual diagnostics with fine-tuned safety boundaries.</p>
-                <div class="border-2 border-dashed border-slate-800 rounded-2xl p-12 bg-slate-950/40 flex flex-col items-center justify-center">
-                    <i data-lucide="image-plus" class="w-12 h-12 text-emerald-500 mb-4"></i>
-                    <p class="text-base font-medium text-slate-200">Select infected crop leaf image to upload</p>
-                    <button class="mt-4 bg-slate-800 hover:bg-slate-700 text-slate-200 text-sm font-medium px-4 py-2 rounded-xl transition-all">Browse Files</button>
                 </div>
             </div>
         </div>
@@ -217,7 +185,7 @@
     <script type="module">
         lucide.createIcons();
 
-        // FEATURE 2: CONVERSATION MEMORY STORE (Strict Gemini Schema Format)
+        // RUNTIME SYSTEM STORAGE WITH CORE AGENT PROMPT
         let chatHistory = [
             {
                 role: "user",
@@ -229,11 +197,10 @@
             }
         ];
 
-        // Sidebar Navigation System
+        // Sidebar Navigation Object
         const navButtons = {
             'btn-dashboard': { btn: document.getElementById('btn-dashboard'), section: document.getElementById('section-dashboard') },
             'btn-chat': { btn: document.getElementById('btn-chat'), section: document.getElementById('section-chat') },
-            'btn-diagnostics': { btn: document.getElementById('btn-diagnostics'), section: document.getElementById('section-diagnostics') },
             'btn-mandi': { btn: document.getElementById('btn-mandi'), section: document.getElementById('section-mandi') }
         };
 
@@ -268,7 +235,7 @@
             });
         }
 
-        // FEATURE 1: NATIVE WEB SPEECH ENGINE (AUDIO INPUT)
+        // NATIVE WEB SPEECH SPEAKER INPUT ENGINE
         if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
             const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
             const recognition = new SpeechRecognition();
@@ -300,10 +267,10 @@
                 else recognition.start();
             });
         } else {
-            micBtn.style.display = 'none';
+            if(micBtn) micBtn.style.display = 'none';
         }
 
-        // SMART DYNAMIC TEXT-TO-SPEECH (AUDIO OUTPUT WITH LANGUAGE ROUTER)
+        // DYNAMIC TTS OUTPUT WITH INTEGRATED LANGUAGE ROUTER
         function speakResponse(rawText) {
             if ('speechSynthesis' in window) {
                 window.speechSynthesis.cancel();
@@ -311,7 +278,6 @@
                 let cleanText = rawText.replace(/[\*\#🤖🎯💡📅]/g, '').replace(/<br>/g, ' ');
                 const utterance = new SpeechSynthesisUtterance(cleanText);
                 
-                // If response contains Hindi/Marathi script, use hi-IN, else use en-IN
                 const hasDevanagari = /[अ-ह]/.test(rawText);
                 if (hasDevanagari) {
                     utterance.lang = 'hi-IN';
@@ -326,7 +292,7 @@
             }
         }
 
-        // SECURE RUNTIME PIPELINE (Calls our secure Vercel backend route)
+        // RUNTIME EXECUTION GATEWAY ENGINE (Calls /api/chat directly)
         async function runInference() {
             const promptText = chatInput.value.trim();
             if(!promptText) return;
@@ -355,7 +321,6 @@
             });
 
             try {
-                // 🔥 NO EXPOSED PLAIN KEYS - Calling server function /api/chat directly
                 const response = await fetch('/api/chat', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
@@ -376,7 +341,6 @@
                         parts: [{ text: aiResponse }]
                     });
 
-                    // Auto play voice output
                     speakResponse(aiResponse);
 
                 } else if (data.error) {
